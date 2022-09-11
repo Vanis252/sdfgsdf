@@ -1,0 +1,160 @@
+local library = {}
+
+function library.CreateWindow(Title, Logo)
+	local F = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local shadowHolder2 = Instance.new("Frame")
+	local umbraShadow2 = Instance.new("ImageLabel")
+	local penumbraShadow2 = Instance.new("ImageLabel")
+	local ambientShadow2 = Instance.new("ImageLabel")
+	local Title = Instance.new("Frame")
+	local logo = Instance.new("ImageLabel")
+	local talkth = Instance.new("TextLabel")
+	local clear = Instance.new("ImageButton")
+	
+	F.Name = "F"
+	F.Parent = game:GetService("CoreGui")
+	F.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Main.Name = "Main"
+	Main.Parent = F
+	Main.Active = true
+	Main.AnchorPoint = Vector2.new(0.5, 0.5)
+	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+	Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
+	Main.BorderSizePixel = 6
+	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Main.Visible = false
+	
+	shadowHolder2.Name = "shadowHolder2"
+	shadowHolder2.Parent = Main
+	shadowHolder2.BackgroundTransparency = 1.000
+	shadowHolder2.ClipsDescendants = true
+	shadowHolder2.Position = UDim2.new(-0.0182232689, 0, -0.0316901393, 0)
+	shadowHolder2.Size = UDim2.new(1.03900003, 0, 1.06700003, 0)
+
+	umbraShadow2.Name = "umbraShadow2"
+	umbraShadow2.Parent = shadowHolder2
+	umbraShadow2.AnchorPoint = Vector2.new(0.5, 0.5)
+	umbraShadow2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	umbraShadow2.BackgroundTransparency = 1.000
+	umbraShadow2.ClipsDescendants = true
+	umbraShadow2.Position = UDim2.new(0.5, 0, 0.5, 0)
+	umbraShadow2.Size = UDim2.new(1, 4, 1, 4)
+	umbraShadow2.Image = "rbxassetid://1316045217"
+	umbraShadow2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+	umbraShadow2.ImageTransparency = 0.860
+	umbraShadow2.ScaleType = Enum.ScaleType.Slice
+	umbraShadow2.SliceCenter = Rect.new(10, 10, 118, 118)
+
+	penumbraShadow2.Name = "penumbraShadow2"
+	penumbraShadow2.Parent = shadowHolder2
+	penumbraShadow2.AnchorPoint = Vector2.new(0.5, 0.5)
+	penumbraShadow2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	penumbraShadow2.BackgroundTransparency = 1.000
+	penumbraShadow2.ClipsDescendants = true
+	penumbraShadow2.Position = UDim2.new(0.5, 0, 0.5, 0)
+	penumbraShadow2.Size = UDim2.new(1, 4, 1, 4)
+	penumbraShadow2.Visible = false
+	penumbraShadow2.Image = "rbxassetid://1316045217"
+	penumbraShadow2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+	penumbraShadow2.ImageTransparency = 0.880
+	penumbraShadow2.ScaleType = Enum.ScaleType.Slice
+	penumbraShadow2.SliceCenter = Rect.new(10, 10, 118, 118)
+
+	ambientShadow2.Name = "ambientShadow2"
+	ambientShadow2.Parent = shadowHolder2
+	ambientShadow2.AnchorPoint = Vector2.new(0.5, 0.5)
+	ambientShadow2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ambientShadow2.BackgroundTransparency = 1.000
+	ambientShadow2.ClipsDescendants = true
+	ambientShadow2.Position = UDim2.new(0.5, 0, 0.5, 0)
+	ambientShadow2.Size = UDim2.new(1, 4, 1, 4)
+	ambientShadow2.Image = "rbxassetid://1316045217"
+	ambientShadow2.ImageColor3 = Color3.fromRGB(0, 0, 0)
+	ambientShadow2.ImageTransparency = 0.880
+	ambientShadow2.ScaleType = Enum.ScaleType.Slice
+	ambientShadow2.SliceCenter = Rect.new(10, 10, 118, 118)
+
+	Title.Name = "Title"
+	Title.Parent = Main
+	Title.Active = true
+	Title.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+	Title.BorderColor3 = Color3.fromRGB(40, 40, 40)
+	Title.Position = UDim2.new(0.0180541109, 0, 0.0246478338, 0)
+	Title.Size = UDim2.new(0, 424, 0, 31)
+	Title.Visible = false
+	
+	logo.Name = "logo"
+	logo.Parent = Title
+	logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	logo.BackgroundTransparency = 1.000
+	logo.Position = UDim2.new(0.0141509436, 0, 0.09375, 0)
+	logo.Size = UDim2.new(0, 25, 0, 25)
+	logo.Image = "rbxassetid://"..Logo
+	logo.ImageColor3 = Color3.fromRGB(208, 208, 208)
+
+	talkth.Name = "talkth"
+	talkth.Parent = Title
+	talkth.Active = true
+	talkth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	talkth.BackgroundTransparency = 1.000
+	talkth.Position = UDim2.new(0.438679248, 0, 0.15625, 0)
+	talkth.Size = UDim2.new(0, 45, 0, 21)
+	talkth.Font = Enum.Font.GothamSemibold
+	talkth.Text = Title
+	talkth.TextColor3 = Color3.fromRGB(126, 126, 126)
+	talkth.TextSize = 21.000
+	
+	clear.Name = "clear"
+	clear.Parent = Title
+	clear.BackgroundTransparency = 1.000
+	clear.Position = UDim2.new(0.926886797, 0, 0.09375, 0)
+	clear.Size = UDim2.new(0, 25, 0, 25)
+	clear.ZIndex = 2
+	clear.AutoButtonColor = false
+	clear.Image = "rbxassetid://3926305904"
+	clear.ImageColor3 = Color3.fromRGB(126, 126, 126)
+	clear.ImageRectOffset = Vector2.new(924, 724)
+	clear.ImageRectSize = Vector2.new(36, 36)
+	
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+
+	dragify(Main)
+end
+
+return library
