@@ -24,7 +24,7 @@ function library.CreateWindow(Name, Logo)
 	Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
 	Main.BorderSizePixel = 6
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
-	Main.Visible = false
+	Main.Visible = true
 	
 	shadowHolder2.Name = "shadowHolder2"
 	shadowHolder2.Parent = Main
@@ -55,7 +55,7 @@ function library.CreateWindow(Name, Logo)
 	penumbraShadow2.ClipsDescendants = true
 	penumbraShadow2.Position = UDim2.new(0.5, 0, 0.5, 0)
 	penumbraShadow2.Size = UDim2.new(1, 4, 1, 4)
-	penumbraShadow2.Visible = false
+	penumbraShadow2.Visible = true
 	penumbraShadow2.Image = "rbxassetid://1316045217"
 	penumbraShadow2.ImageColor3 = Color3.fromRGB(0, 0, 0)
 	penumbraShadow2.ImageTransparency = 0.880
@@ -83,7 +83,7 @@ function library.CreateWindow(Name, Logo)
 	Title.BorderColor3 = Color3.fromRGB(40, 40, 40)
 	Title.Position = UDim2.new(0.0180541109, 0, 0.0246478338, 0)
 	Title.Size = UDim2.new(0, 424, 0, 31)
-	Title.Visible = false
+	Title.Visible = true
 	
 	logo.Name = "logo"
 	logo.Parent = Title
