@@ -1,6 +1,6 @@
 local library = {}
 
-function library.CreateWindow(Title, Logo)
+function library.CreateWindow(Name, Logo)
 	local F = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local shadowHolder2 = Instance.new("Frame")
@@ -102,7 +102,7 @@ function library.CreateWindow(Title, Logo)
 	talkth.Position = UDim2.new(0.438679248, 0, 0.15625, 0)
 	talkth.Size = UDim2.new(0, 45, 0, 21)
 	talkth.Font = Enum.Font.GothamSemibold
-	talkth.Text = Title
+	talkth.Text = Name
 	talkth.TextColor3 = Color3.fromRGB(126, 126, 126)
 	talkth.TextSize = 21.000
 	
